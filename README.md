@@ -16,10 +16,9 @@ Este proyecto contiene pruebas automatizadas del registro (signup) y login. Util
 
 Antes de ejecutar las pruebas deben de tener el siguiente programa instalado:
 
-- **Node.js** ( link de descarga (https://nodejs.org/))
+- **Node.js** (https://nodejs.org/)
 
 ## Pasos para ejecutar
-
 
 1. **Instalar dependencias**:
    
@@ -43,17 +42,17 @@ Antes de ejecutar las pruebas deben de tener el siguiente programa instalado:
 
 3. **Accede al archivo resultante**:
 
-Una vez que las pruebas hayan finalizado, el archivo HTML del reporte generado se encontrará en la siguiente ruta:
+    Una vez que las pruebas hayan finalizado, el archivo HTML del reporte generado se encontrará en la siguiente ruta:
 
-`cypress\reports\html\cypress\reports\merged.html`
-
-
-o puedes abrirlo directamente desde la terminal con el siguiente comando:
-
-`start cypress/reports/html/cypress/reports/merged.html`
+    `cypress\reports\html\cypress\reports\merged.html`
 
 
-Finalmente, se abrira el reporte en el navegador preterminado.
+    o puedes abrirlo directamente desde la terminal con el siguiente comando:
+
+    `start cypress/reports/html/cypress/reports/merged.html`
+
+
+    Finalmente, se abrira el reporte en el navegador preterminado.
 
 
 ## Clonar repositorio
