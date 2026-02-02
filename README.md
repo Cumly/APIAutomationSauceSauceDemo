@@ -9,7 +9,7 @@ Este proyecto contiene pruebas automatizadas del registro (signup) y login. Util
 ## Criterios
 
 - El archivo conclusiones se encuentra adjunto al proyecto como **Conclusiones.txt**
-- El proyecto se encuentra en subido en GitHub en el repositorio **Conclusiones.txt**
+- El proyecto se encuentra en subido en GitHub en el repositorio **https://github.com/Cumly/APIAutomation.git**
 
 
 ## Requisitos
@@ -60,8 +60,8 @@ Finalmente, se abrira el reporte en el navegador preterminado.
 
 Para clonar el repositorio, utiliza el siguiente comando:
 
-`git clone <URL del repositorio>`
-`cd <nombre_del_repositorio>`
+`git clone https://github.com/Cumly/APIAutomation.git`
+`cd APIAutomation`
 
 
 Después de clonar el repositorio, debes instalar las dependencias y ejecutar las pruebas siguiendo los pasos detallados anteriormente.
