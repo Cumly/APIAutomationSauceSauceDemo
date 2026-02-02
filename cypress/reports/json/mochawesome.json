@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2026-02-02T08:37:39.768Z",
-    "end": "2026-02-02T08:37:40.671Z",
-    "duration": 903,
+    "start": "2026-02-02T09:27:06.485Z",
+    "end": "2026-02-02T09:27:07.361Z",
+    "duration": 876,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ff6d96c3-d425-4a35-a941-43538db84b63",
+      "uuid": "b878b432-b49c-49e3-b541-ce431493194b",
       "title": "",
       "fullFile": "cypress\\e2e\\signup.cy.js",
       "file": "cypress\\e2e\\signup.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "70dc8084-f65c-4702-a3f3-3bf666feb3bb",
+          "uuid": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
           "title": "Registro en el sistema",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Crear un nuevo usuario",
               "fullTitle": "Registro en el sistema Crear un nuevo usuario",
               "timedOut": null,
-              "duration": 268,
+              "duration": 255,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const user = 'user' + Math.floor(Math.random() * 1000000);\nconst password = 'pass' + Math.floor(Math.random() * 1000000);\ncy.request({\n  method: 'POST',\n  url: 'https://api.demoblaze.com/signup',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: {\n    username: user,\n    password: password\n  }\n}).then(response => {\n  expect(response.status).to.equal(200);\n});",
               "err": {},
-              "uuid": "d4fd90b5-6996-4880-bfcf-854a8965ddb7",
-              "parentUUID": "70dc8084-f65c-4702-a3f3-3bf666feb3bb",
+              "uuid": "428a1b64-9f80-4875-b3a8-32a0f65d7d24",
+              "parentUUID": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Crear un usuario ya existente",
               "fullTitle": "Registro en el sistema Crear un usuario ya existente",
               "timedOut": null,
-              "duration": 613,
+              "duration": 600,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.fixture('validUser').then(users => {\n  users.forEach(user => {\n    cy.request({\n      method: 'POST',\n      url: 'https://api.demoblaze.com/signup',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: {\n        username: user.username,\n        password: user.password\n      }\n    }).then(response => {\n      expect(response.status).to.equal(200);\n      expect(response.body).to.have.property('errorMessage', 'This user already exist.');\n    });\n  });\n});",
               "err": {},
-              "uuid": "2bf1175d-24c4-4247-a04b-d6d8d66a31e0",
-              "parentUUID": "70dc8084-f65c-4702-a3f3-3bf666feb3bb",
+              "uuid": "7c1bea9c-05d3-4a34-b11f-607eb72e1caf",
+              "parentUUID": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d4fd90b5-6996-4880-bfcf-854a8965ddb7",
-            "2bf1175d-24c4-4247-a04b-d6d8d66a31e0"
+            "428a1b64-9f80-4875-b3a8-32a0f65d7d24",
+            "7c1bea9c-05d3-4a34-b11f-607eb72e1caf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 881,
+          "duration": 855,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

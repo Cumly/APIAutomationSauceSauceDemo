@@ -5,20 +5,20 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2026-02-02T08:32:43.044Z",
-    "end": "2026-02-02T08:32:43.983Z",
-    "duration": 939,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
-    "hasSkipped": false
+    "hasSkipped": false,
+    "start": "2026-02-02T09:27:06.485Z",
+    "end": "2026-02-02T09:27:07.361Z",
+    "duration": 876
   },
   "results": [
     {
-      "uuid": "770325c1-aeec-4f44-bd5d-6425521b2a10",
+      "uuid": "b878b432-b49c-49e3-b541-ce431493194b",
       "title": "",
       "fullFile": "cypress\\e2e\\signup.cy.js",
       "file": "cypress\\e2e\\signup.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7bdd0e51-1ff2-48a8-93ae-e81f94d2d727",
+          "uuid": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
           "title": "Registro en el sistema",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Crear un nuevo usuario",
               "fullTitle": "Registro en el sistema Crear un nuevo usuario",
               "timedOut": null,
-              "duration": 270,
+              "duration": 255,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const user = 'user' + Math.floor(Math.random() * 1000000);\nconst password = 'pass' + Math.floor(Math.random() * 1000000);\ncy.request({\n  method: 'POST',\n  url: 'https://api.demoblaze.com/signup',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: {\n    username: user,\n    password: password\n  }\n}).then(response => {\n  expect(response.status).to.equal(200);\n});",
               "err": {},
-              "uuid": "97a01ee7-d884-4275-85bb-16a47746b5b5",
-              "parentUUID": "7bdd0e51-1ff2-48a8-93ae-e81f94d2d727",
+              "uuid": "428a1b64-9f80-4875-b3a8-32a0f65d7d24",
+              "parentUUID": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Crear un usuario ya existente",
               "fullTitle": "Registro en el sistema Crear un usuario ya existente",
               "timedOut": null,
-              "duration": 640,
+              "duration": 600,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.fixture('validUser').then(users => {\n  users.forEach(user => {\n    cy.request({\n      method: 'POST',\n      url: 'https://api.demoblaze.com/signup',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: {\n        username: user.username,\n        password: user.password\n      }\n    }).then(response => {\n      expect(response.status).to.equal(200);\n      expect(response.body).to.have.property('errorMessage', 'This user already exist.');\n    });\n  });\n});",
               "err": {},
-              "uuid": "6e9b6f15-2dda-4ee1-ac6b-8640a864843e",
-              "parentUUID": "7bdd0e51-1ff2-48a8-93ae-e81f94d2d727",
+              "uuid": "7c1bea9c-05d3-4a34-b11f-607eb72e1caf",
+              "parentUUID": "857dd4dd-a13a-4f87-97d3-8e9f336ed6d6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "97a01ee7-d884-4275-85bb-16a47746b5b5",
-            "6e9b6f15-2dda-4ee1-ac6b-8640a864843e"
+            "428a1b64-9f80-4875-b3a8-32a0f65d7d24",
+            "7c1bea9c-05d3-4a34-b11f-607eb72e1caf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 910,
+          "duration": 855,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -114,7 +114,7 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports/json",
-        "overwrite": false,
+        "overwrite": true,
         "html": false,
         "json": true
       },
