@@ -1,4 +1,4 @@
-# Reto técnico - QA- TCS Ecuador - Ejercicio 2 – APIs - Giuliana Rivera
+# Reto técnico - QA
 
 Este proyecto contiene pruebas automatizadas del registro (signup) y login. Utilizando Cypress para realizar una prueba de cada uno de estos servicios:
 
