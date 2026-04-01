@@ -1,0 +1,33 @@
+name: Cypress API Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas Cypress
+        run: npm run test-report
+
+      - name: Guardar reporte CypressEE
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: cypress-report
+          path: cypress/reports/html

@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2026-04-01T04:41:35.341Z",
-    "end": "2026-04-01T04:41:36.571Z",
-    "duration": 1230
+    "start": "2026-04-01T05:51:32.213Z",
+    "end": "2026-04-01T05:51:33.640Z",
+    "duration": 1427
   },
   "results": [
     {
-      "uuid": "6b74be8b-012b-4633-afc2-e902b7be7844",
+      "uuid": "07f20670-eae0-4980-86b2-3c107aee6548",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ea4d9efc-bd2a-4954-bb47-30f85d21df75",
+          "uuid": "7b4b3c1a-23fc-4c95-8847-e8974bb2d2b7",
           "title": "Ingreso en el sistema",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Iniciar sesión con credenciales correctas",
               "fullTitle": "Ingreso en el sistema Iniciar sesión con credenciales correctas",
               "timedOut": null,
-              "duration": 605,
+              "duration": 658,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/login',\n  headers: {\n    'x-api-key': 'pro_641d62af50df59490a1dfed6d12256be03bac7bb8d88e64e61668caef3f522e3'\n  },\n  body: {\n    email: \"eve.holt@reqres.in\",\n    password: \"cityslicka\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('token');\n});",
               "err": {},
-              "uuid": "a17a4181-5ede-4f8e-86ea-6670af3de9d3",
-              "parentUUID": "ea4d9efc-bd2a-4954-bb47-30f85d21df75",
+              "uuid": "9d130fa9-778e-4dce-a904-3140c1e74408",
+              "parentUUID": "7b4b3c1a-23fc-4c95-8847-e8974bb2d2b7",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Iniciar sesión sin el campo contraseña",
               "fullTitle": "Ingreso en el sistema Iniciar sesión sin el campo contraseña",
               "timedOut": null,
-              "duration": 197,
+              "duration": 250,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/login',\n  failOnStatusCode: false,\n  headers: {\n    'x-api-key': 'pro_641d62af50df59490a1dfed6d12256be03bac7bb8d88e64e61668caef3f522e3'\n  },\n  body: {\n    email: \"eve.holt@reqres.in\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(400);\n  expect(response.body.error).to.eq(\"Missing password\");\n});",
               "err": {},
-              "uuid": "9c416bea-1881-4cdf-8655-3a42fb28e542",
-              "parentUUID": "ea4d9efc-bd2a-4954-bb47-30f85d21df75",
+              "uuid": "e684a631-18b5-425b-8850-bf210fdda6e3",
+              "parentUUID": "7b4b3c1a-23fc-4c95-8847-e8974bb2d2b7",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Iniciar sesión con usuario no existente",
               "fullTitle": "Ingreso en el sistema Iniciar sesión con usuario no existente",
               "timedOut": null,
-              "duration": 194,
+              "duration": 242,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/login',\n  failOnStatusCode: false,\n  headers: {\n    'x-api-key': 'pro_641d62af50df59490a1dfed6d12256be03bac7bb8d88e64e61668caef3f522e3'\n  },\n  body: {\n    email: \"riberaguli@gmail.com\",\n    password: \"cityslicka\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(400);\n  expect(response.body.error).to.eq(\"user not found\");\n});",
               "err": {},
-              "uuid": "3e3d3c83-2651-4a2b-9c45-a041ec9521ca",
-              "parentUUID": "ea4d9efc-bd2a-4954-bb47-30f85d21df75",
+              "uuid": "de980f39-e033-4973-aefd-2ed132fba4be",
+              "parentUUID": "7b4b3c1a-23fc-4c95-8847-e8974bb2d2b7",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Iniciar sesión sin el campo email",
               "fullTitle": "Ingreso en el sistema Iniciar sesión sin el campo email",
               "timedOut": null,
-              "duration": 194,
+              "duration": 242,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,23 +101,23 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/login',\n  failOnStatusCode: false,\n  headers: {\n    'x-api-key': 'pro_641d62af50df59490a1dfed6d12256be03bac7bb8d88e64e61668caef3f522e3'\n  },\n  body: {\n    password: \"cityslicka\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(400);\n  expect(response.body.error).to.eq(\"Missing email or username\");\n});",
               "err": {},
-              "uuid": "ceacc4b8-1c43-45d1-b8fd-5f71a6ffa0da",
-              "parentUUID": "ea4d9efc-bd2a-4954-bb47-30f85d21df75",
+              "uuid": "0806def8-9825-4459-8b29-22ce8479064c",
+              "parentUUID": "7b4b3c1a-23fc-4c95-8847-e8974bb2d2b7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a17a4181-5ede-4f8e-86ea-6670af3de9d3",
-            "9c416bea-1881-4cdf-8655-3a42fb28e542",
-            "3e3d3c83-2651-4a2b-9c45-a041ec9521ca",
-            "ceacc4b8-1c43-45d1-b8fd-5f71a6ffa0da"
+            "9d130fa9-778e-4dce-a904-3140c1e74408",
+            "e684a631-18b5-425b-8850-bf210fdda6e3",
+            "de980f39-e033-4973-aefd-2ed132fba4be",
+            "0806def8-9825-4459-8b29-22ce8479064c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1190,
+          "duration": 1392,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
