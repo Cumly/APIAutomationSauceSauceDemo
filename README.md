@@ -1,16 +1,8 @@
-# Reto técnico - QA
+# Prueba Técnica – Especialista QA 
 
-Este proyecto contiene pruebas automatizadas del registro (signup) y login. Utilizando Cypress para realizar una prueba de cada uno de estos servicios:
+Este proyecto contiene pruebas automatizadas del registro login. 
 
-**Signup:** https://api.demoblaze.com/signup 
-**Login:** https://api.demoblaze.com/login
-
-
-## Criterios
-
-- El archivo conclusiones se encuentra adjunto al proyecto como **Conclusiones.txt**
-- El proyecto se encuentra en subido en GitHub en el repositorio **https://github.com/Cumly/APIAutomation.git**
-
+**Login:** https://reqres.in/api/login
 
 ## Requisitos
 
@@ -36,7 +28,7 @@ Antes de ejecutar las pruebas deben de tener el siguiente programa instalado:
 
    Este comando realizará las siguientes acciones:
 
-    - Ejecutará las pruebas de Cypress para los servicios **signup** y **login**.
+    - Ejecutará las pruebas de Cypress
     - Generará un reporte visual en formato **HTML** que podrás abrir en tu navegador.
 
 
@@ -59,8 +51,8 @@ Antes de ejecutar las pruebas deben de tener el siguiente programa instalado:
 
 Para clonar el repositorio, utiliza el siguiente comando:
 
-`git clone https://github.com/Cumly/APIAutomation.git`
-`cd APIAutomation`
+`git clone [https://github.com/Cumly/APIAutomation.git](https://github.com/Cumly/APIAutomationSauceSauceDemo.git)`
+`cd APIAutomationSauceSauceDemo`
 
 
 Después de clonar el repositorio, debes instalar las dependencias y ejecutar las pruebas siguiendo los pasos detallados anteriormente.
